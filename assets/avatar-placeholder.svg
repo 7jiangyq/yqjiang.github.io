@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar placeholder</title>
+  <desc id="desc">Simple portrait style placeholder for a personal homepage.</desc>
+  <rect width="480" height="560" fill="#f2f3f3"/>
+  <rect x="36" y="36" width="408" height="488" rx="8" fill="#e3e5e7"/>
+  <circle cx="240" cy="190" r="90" fill="#c3c9cf"/>
+  <path d="M126 418c18-73 80-116 114-116s96 43 114 116" fill="#c3c9cf"/>
+  <text x="240" y="500" text-anchor="middle" font-size="28" font-family="Trebuchet MS, Helvetica, sans-serif" fill="#6b7280">Your Photo Here</text>
+</svg>
