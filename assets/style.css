@@ -253,6 +253,19 @@ nav a {
   color: #6a7178;
 }
 
+.publication-badge {
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0.08em 0.55em;
+  border: 1px solid #c96b2c;
+  border-radius: 999px;
+  color: #a34d18;
+  font-size: 0.78em;
+  font-weight: bold;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
 .paper-box {
   display: flex;
   justify-content: left;
