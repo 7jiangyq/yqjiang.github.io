@@ -1,0 +1,281 @@
+:root {
+  --bg: #f5f1e8;
+  --panel: rgba(255, 252, 247, 0.92);
+  --panel-strong: #fffdf8;
+  --text: #1d2430;
+  --muted: #5f6775;
+  --line: rgba(29, 36, 48, 0.12);
+  --accent: #b14d2d;
+  --accent-soft: rgba(177, 77, 45, 0.12);
+  --shadow: 0 18px 45px rgba(40, 34, 25, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(177, 77, 45, 0.12), transparent 28%),
+    radial-gradient(circle at right 20%, rgba(37, 108, 84, 0.1), transparent 26%),
+    linear-gradient(180deg, #f6f0e5 0%, #f3eee4 100%);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 64px;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 28px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.profile-card,
+.panel {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.profile-card {
+  padding: 28px;
+}
+
+.avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: linear-gradient(135deg, #283447 0%, #b14d2d 100%);
+}
+
+.profile-card h1,
+.content h2,
+.entry h3,
+.card h3 {
+  font-family: "Crimson Text", serif;
+}
+
+.profile-card h1 {
+  margin: 18px 0 8px;
+  font-size: 2rem;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.summary {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.profile-meta,
+.side-nav,
+.timeline,
+.simple-list,
+.publication-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-meta {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.profile-meta li {
+  margin-bottom: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.side-nav {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+}
+
+.side-nav a {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  font-weight: 600;
+  color: var(--text);
+  transition: 180ms ease;
+}
+
+.side-nav a:hover {
+  text-decoration: none;
+  border-color: var(--line);
+  background: var(--accent-soft);
+}
+
+.content {
+  display: grid;
+  gap: 22px;
+}
+
+.panel {
+  padding: 30px 32px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.content h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.05;
+}
+
+.content p,
+.timeline li,
+.entry p,
+.card p,
+.simple-list li,
+.publication-list li {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.timeline li,
+.simple-list li,
+.publication-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline li:last-child,
+.simple-list li:last-child,
+.publication-list li:last-child {
+  border-bottom: 0;
+}
+
+.timeline span {
+  display: inline-block;
+  min-width: 78px;
+  margin-right: 12px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.entry-list,
+.cards {
+  display: grid;
+  gap: 16px;
+}
+
+.entry,
+.card {
+  padding: 20px;
+  background: var(--panel-strong);
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.entry h3,
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+}
+
+.entry-head p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.publication-list {
+  padding-left: 20px;
+  list-style: decimal;
+}
+
+@media (max-width: 920px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1180px);
+    padding-top: 20px;
+    gap: 16px;
+  }
+
+  .profile-card,
+  .panel {
+    border-radius: 22px;
+  }
+
+  .profile-card,
+  .panel {
+    padding: 22px;
+  }
+
+  .entry-head {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
