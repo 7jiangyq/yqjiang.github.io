@@ -235,6 +235,24 @@ nav a {
   font-size: 1em;
 }
 
+.publication-list {
+  display: grid;
+  gap: 1.25em;
+}
+
+.publication-item {
+  padding-bottom: 1.1em;
+  border-bottom: 1px solid #efefef;
+}
+
+.publication-title {
+  margin-bottom: 0.35em;
+}
+
+.publication-authors {
+  color: #6a7178;
+}
+
 .paper-box {
   display: flex;
   justify-content: left;
